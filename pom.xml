@@ -6,7 +6,7 @@
 	<groupId>com.springboot</groupId>
 	<artifactId>Start-Spring-Boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>Start-Spring-Boot</name>
 	<description>Demo project for Spring Boot</description>
@@ -28,6 +28,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+<!--			&lt;!&ndash; 移除嵌入式tomcat插件 &ndash;&gt;-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
 		</dependency>
 
 		<dependency>
@@ -35,6 +42,24 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+<!--		<dependency>-->
+<!--		    <groupId>org.apache.tomcat</groupId>-->
+<!--		    <artifactId>tomcat-servlet-api</artifactId>-->
+<!--		    <version>9.0.16</version>-->
+<!--		    <scope>provided</scope>-->
+<!--		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot</artifactId>
+			<version>1.5.14.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot</artifactId>
+			<version>1.5.14.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 
 	<repositories>
@@ -46,6 +71,7 @@
 	</repositories>
 
 	<build>
+		<finalName>Start-Spring-Boot</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
